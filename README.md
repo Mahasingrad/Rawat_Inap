@@ -6,3 +6,5 @@ Oki Kurniawan - 152018052,
 Marsa Mahasin - 152018058, 
 
 Nama Database : rawatinap
+
+Import terlebih dahulu rawatinap.sql sebelum menjalankan aplikasi
