@@ -393,13 +393,27 @@ public class MainInap extends javax.swing.JFrame {
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblRuangan.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblRuanganMouseClicked(evt);
             }
         });
         jScrollPane6.setViewportView(tblRuangan);
+        if (tblRuangan.getColumnModel().getColumnCount() > 0) {
+            tblRuangan.getColumnModel().getColumn(0).setResizable(false);
+            tblRuangan.getColumnModel().getColumn(1).setResizable(false);
+            tblRuangan.getColumnModel().getColumn(2).setResizable(false);
+            tblRuangan.getColumnModel().getColumn(3).setResizable(false);
+        }
 
         javax.swing.GroupLayout pnlTblRuanganLayout = new javax.swing.GroupLayout(pnlTblRuangan);
         pnlTblRuangan.setLayout(pnlTblRuanganLayout);
@@ -407,8 +421,8 @@ public class MainInap extends javax.swing.JFrame {
             pnlTblRuanganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlTblRuanganLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(452, Short.MAX_VALUE))
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 840, Short.MAX_VALUE)
+                .addContainerGap())
         );
         pnlTblRuanganLayout.setVerticalGroup(
             pnlTblRuanganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -448,13 +462,27 @@ public class MainInap extends javax.swing.JFrame {
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblPerawat.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblPerawatMouseClicked(evt);
             }
         });
         jScrollPane7.setViewportView(tblPerawat);
+        if (tblPerawat.getColumnModel().getColumnCount() > 0) {
+            tblPerawat.getColumnModel().getColumn(0).setResizable(false);
+            tblPerawat.getColumnModel().getColumn(1).setResizable(false);
+            tblPerawat.getColumnModel().getColumn(2).setResizable(false);
+            tblPerawat.getColumnModel().getColumn(3).setResizable(false);
+        }
 
         tblDokter.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         tblDokter.setModel(new javax.swing.table.DefaultTableModel(
@@ -467,13 +495,27 @@ public class MainInap extends javax.swing.JFrame {
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblDokter.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblDokterMouseClicked(evt);
             }
         });
         jScrollPane8.setViewportView(tblDokter);
+        if (tblDokter.getColumnModel().getColumnCount() > 0) {
+            tblDokter.getColumnModel().getColumn(0).setResizable(false);
+            tblDokter.getColumnModel().getColumn(1).setResizable(false);
+            tblDokter.getColumnModel().getColumn(2).setResizable(false);
+            tblDokter.getColumnModel().getColumn(3).setResizable(false);
+        }
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("DOKTER");
@@ -538,13 +580,27 @@ public class MainInap extends javax.swing.JFrame {
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblPasien.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblPasienMouseClicked(evt);
             }
         });
         jScrollPane4.setViewportView(tblPasien);
+        if (tblPasien.getColumnModel().getColumnCount() > 0) {
+            tblPasien.getColumnModel().getColumn(0).setResizable(false);
+            tblPasien.getColumnModel().getColumn(1).setResizable(false);
+            tblPasien.getColumnModel().getColumn(2).setResizable(false);
+            tblPasien.getColumnModel().getColumn(3).setResizable(false);
+        }
 
         javax.swing.GroupLayout pnlTblPasienLayout = new javax.swing.GroupLayout(pnlTblPasien);
         pnlTblPasien.setLayout(pnlTblPasienLayout);
