@@ -42,11 +42,7 @@ public class BuatLaporan extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txtPasien = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        txtDokter = new javax.swing.JTextField();
-        txtPerawat = new javax.swing.JTextField();
-        txtRuangan = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -57,22 +53,18 @@ public class BuatLaporan extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jLabel6 = new javax.swing.JLabel();
         btnKembali = new javax.swing.JButton();
+        cbRuangan = new javax.swing.JComboBox<>();
+        cbPasien = new javax.swing.JComboBox<>();
+        cbDokter = new javax.swing.JComboBox<>();
+        cbPerawat = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("FORM RAWAT INAP");
         setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         setResizable(false);
 
-        txtPasien.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("ID Pasien");
-
-        txtDokter.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-
-        txtPerawat.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-
-        txtRuangan.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("ID Dokter");
@@ -117,6 +109,14 @@ public class BuatLaporan extends javax.swing.JFrame {
             }
         });
 
+        cbRuangan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "401", "402", "403", "404", "411", "412", "413", "414", "421", "422", "423", "424" }));
+
+        cbPasien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "201", "202", "203", "204", "205" }));
+
+        cbDokter.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "101", "102", "103", "104", "105" }));
+
+        cbPerawat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "301", "302", "303", "304", "305" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -131,13 +131,13 @@ public class BuatLaporan extends javax.swing.JFrame {
                             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addGap(56, 56, 56)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(dateInap, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtRuangan)
-                            .addComponent(txtPerawat)
-                            .addComponent(txtDokter)
-                            .addComponent(txtPasien, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbPasien, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cbDokter, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cbPerawat, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cbRuangan, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(dateInap, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)))
                     .addComponent(btnKembali, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,25 +151,25 @@ public class BuatLaporan extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPasien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel6))
+                    .addComponent(jLabel6)
+                    .addComponent(cbPasien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtDokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
+                            .addComponent(jLabel2)
+                            .addComponent(cbDokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtPerawat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))
-                        .addGap(18, 18, 18)
+                            .addComponent(jLabel3)
+                            .addComponent(cbPerawat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(16, 16, 16)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtRuangan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
+                            .addComponent(jLabel4)
+                            .addComponent(cbRuangan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
@@ -179,7 +179,7 @@ public class BuatLaporan extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnKonfirmasi)
                     .addComponent(btnKembali))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pack();
@@ -187,10 +187,10 @@ public class BuatLaporan extends javax.swing.JFrame {
 
     private void btnKonfirmasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKonfirmasiActionPerformed
         // TODO add your handling code here:
-        int idPasien = Integer.parseInt(txtPasien.getText());
-        int idDokter = Integer.parseInt(txtDokter.getText());
-        int idPerawat = Integer.parseInt(txtPerawat.getText());
-        int idRuangan = Integer.parseInt(txtRuangan.getText());
+        int idPasien = Integer.parseInt((String)cbPasien.getSelectedItem());
+        int idDokter = Integer.parseInt((String)cbDokter.getSelectedItem());
+        int idPerawat = Integer.parseInt((String)cbPerawat.getSelectedItem());
+        int idRuangan = Integer.parseInt((String)cbRuangan.getSelectedItem());
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String tanggal=(String) sdf.format(dateInap.getDate());
         String rincianInap = jTextArea1.getText();
@@ -204,7 +204,9 @@ public class BuatLaporan extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Laporan Berhasil Dibuat");
             MainInap mi = new MainInap();
             mi.InsertLap();
-            mi.UpdateIsi(txtRuangan.getText());
+            mi.UpdateIsi((String)cbRuangan.getSelectedItem());
+
+            
         }
         else{
             JOptionPane.showMessageDialog(null, "Laporan Gagal Dibuat");
@@ -253,6 +255,12 @@ public class BuatLaporan extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -267,6 +275,10 @@ public class BuatLaporan extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnKembali;
     private javax.swing.JButton btnKonfirmasi;
+    private javax.swing.JComboBox<String> cbDokter;
+    private javax.swing.JComboBox<String> cbPasien;
+    private javax.swing.JComboBox<String> cbPerawat;
+    private javax.swing.JComboBox<String> cbRuangan;
     private com.toedter.calendar.JDateChooser dateInap;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -276,10 +288,6 @@ public class BuatLaporan extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField txtDokter;
-    private javax.swing.JTextField txtPasien;
-    private javax.swing.JTextField txtPerawat;
-    private javax.swing.JTextField txtRuangan;
     // End of variables declaration//GEN-END:variables
 
     private void If(boolean b) {

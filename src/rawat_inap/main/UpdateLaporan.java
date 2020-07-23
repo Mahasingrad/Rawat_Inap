@@ -33,11 +33,12 @@ public class UpdateLaporan extends javax.swing.JFrame {
         initComponents();
         txtLaporan.setText(idLaporan);
         txtPasien.setText(idPasien);
-        txtDokter.setText(idDokter);
-        txtPerawat.setText(idPerawat);
-        txtRuangan.setText(idRuangan);
+        cbPerawat.setSelectedItem(idPerawat);
+        cbRuangan.setSelectedItem(idRuangan);
         txtRuangan2.setText(idRuangan);
         taRincian.setText(rincian);
+        cbDokter.setSelectedItem(idDokter);
+        
 
         
     }
@@ -53,9 +54,6 @@ public class UpdateLaporan extends javax.swing.JFrame {
 
         txtPasien = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        txtDokter = new javax.swing.JTextField();
-        txtPerawat = new javax.swing.JTextField();
-        txtRuangan = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -69,6 +67,9 @@ public class UpdateLaporan extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         txtLaporan = new javax.swing.JTextField();
         txtRuangan2 = new javax.swing.JTextField();
+        cbDokter = new javax.swing.JComboBox<>();
+        cbPerawat = new javax.swing.JComboBox<>();
+        cbRuangan = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("FORM RAWAT INAP");
@@ -80,12 +81,6 @@ public class UpdateLaporan extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("ID Pasien");
-
-        txtDokter.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-
-        txtPerawat.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-
-        txtRuangan.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("ID Dokter");
@@ -136,6 +131,17 @@ public class UpdateLaporan extends javax.swing.JFrame {
         txtLaporan.setEditable(false);
         txtLaporan.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
 
+        cbDokter.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "101", "102", "103", "104", "105" }));
+        cbDokter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbDokterActionPerformed(evt);
+            }
+        });
+
+        cbPerawat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "301", "302", "303", "304", "305" }));
+
+        cbRuangan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "401", "402", "403", "404", "411", "412", "413", "414", "421", "422", "423", "424" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -157,14 +163,14 @@ public class UpdateLaporan extends javax.swing.JFrame {
                         .addGap(56, 56, 56)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(dateInap, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtRuangan)
-                            .addComponent(txtPerawat)
-                            .addComponent(txtDokter)
-                            .addComponent(txtPasien, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtPasien)
+                            .addComponent(cbDokter, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cbPerawat, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cbRuangan, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(btnKembali, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE)
                     .addComponent(btnKonfirmasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(8, 8, 8)
@@ -176,7 +182,7 @@ public class UpdateLaporan extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
+                .addContainerGap(24, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtLaporan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7)
@@ -190,16 +196,16 @@ public class UpdateLaporan extends javax.swing.JFrame {
                             .addComponent(jLabel1))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtDokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
+                            .addComponent(jLabel2)
+                            .addComponent(cbDokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtPerawat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))
-                        .addGap(18, 18, 18)
+                            .addComponent(jLabel3)
+                            .addComponent(cbPerawat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(16, 16, 16)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtRuangan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
+                            .addComponent(jLabel4)
+                            .addComponent(cbRuangan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
@@ -219,9 +225,9 @@ public class UpdateLaporan extends javax.swing.JFrame {
         // TODO add your handling code here:
         int idLaporan = Integer.parseInt(txtLaporan.getText());
         int idPasien = Integer.parseInt(txtPasien.getText());
-        int idDokter = Integer.parseInt(txtDokter.getText());
-        int idPerawat = Integer.parseInt(txtPerawat.getText());
-        int idRuangan = Integer.parseInt(txtRuangan.getText());
+        int idDokter = Integer.parseInt((String)cbDokter.getSelectedItem());
+        int idPerawat = Integer.parseInt((String)cbPerawat.getSelectedItem());
+        int idRuangan = Integer.parseInt((String)cbRuangan.getSelectedItem());
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String tanggal=(String) sdf.format(dateInap.getDate());
         String rincianInap = taRincian.getText();
@@ -236,7 +242,7 @@ public class UpdateLaporan extends javax.swing.JFrame {
             MainInap mi = new MainInap();
             mi.InsertLap();
             mi.UpdateKosong(txtRuangan2.getText());
-            mi.UpdateIsi(txtRuangan.getText());
+            mi.UpdateIsi((String)cbRuangan.getSelectedItem());
         }
         else{
             JOptionPane.showMessageDialog(null, "Laporan Gagal Dibuat");
@@ -255,6 +261,10 @@ public class UpdateLaporan extends javax.swing.JFrame {
         mi.InsertLap();
         this.setVisible(false);
     }//GEN-LAST:event_btnKembaliActionPerformed
+
+    private void cbDokterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDokterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbDokterActionPerformed
 
     /**
      * @param args the command line arguments
@@ -287,6 +297,18 @@ public class UpdateLaporan extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -301,6 +323,9 @@ public class UpdateLaporan extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnKembali;
     private javax.swing.JButton btnKonfirmasi;
+    private javax.swing.JComboBox<String> cbDokter;
+    private javax.swing.JComboBox<String> cbPerawat;
+    private javax.swing.JComboBox<String> cbRuangan;
     private com.toedter.calendar.JDateChooser dateInap;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -311,11 +336,8 @@ public class UpdateLaporan extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea taRincian;
-    private javax.swing.JTextField txtDokter;
     private javax.swing.JTextField txtLaporan;
     private javax.swing.JTextField txtPasien;
-    private javax.swing.JTextField txtPerawat;
-    private javax.swing.JTextField txtRuangan;
     private javax.swing.JTextField txtRuangan2;
     // End of variables declaration//GEN-END:variables
 
